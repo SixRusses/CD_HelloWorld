@@ -10,7 +10,7 @@ RUN rm -rf package-lock.json node_modules
 RUN npm install
 
 # Bundke app source
-COPY ./usr/src/app
+COPY . /usr/src/app
 
 USER node 
 CMD [ "npm", "start" ]
