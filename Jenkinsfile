@@ -1,7 +1,7 @@
 pipeline {
     environment {
         registry = "sixrusses/helloworld"
-        registryCredental = "dockerhub"
+        registryCredential = "dockerhub"
         dockerImage = ''
     }
 
@@ -27,7 +27,7 @@ pipeline {
         stage('Publish Image') {
             steps{
                 script {
-                    docker.withRegistry('', registryCredental) {
+                    docker.withRegistry('', registryCredential) {
                         dockerImage.push()
                         dockerImage.push('latest')
                     }
