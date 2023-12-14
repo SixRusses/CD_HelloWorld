@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        registry = "SixRusses/CD_HelloWorld"
+        registry = "sixrusses/helloworld"
         registryCredental = "dockerhub"
         dockerImage = ''
     }
